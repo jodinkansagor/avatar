@@ -13,7 +13,7 @@ import './App.css';
 
 const Header = () => (
   <header>
-    <img src={avatarLogo} />
+    <a href = '/'><img src={avatarLogo} /></a>
   </header>
 );
 
