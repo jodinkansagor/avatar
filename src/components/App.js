@@ -24,8 +24,8 @@ export default function App() {
     <Router>
       <Header />
       <Switch>
-        <Route path='/' component={List} />
-        <Route path='/character/:_id' component={Character} />
+        <Route exact path='/' component={List} />
+        <Route path='/character/:id' component={Character} />
       </Switch>
     </Router>
   );

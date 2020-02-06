@@ -3,7 +3,8 @@ export const getCharacters = (page) => {
     .then(res => res.json());
 };
 
-export const getSpecificCharacter = (_id) => {
-  return fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters/${_id}`)
+export const getSpecificCharacter = (id) => {
+  return fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters/${id}`)
     .then(res => res.json());
+    
 };
