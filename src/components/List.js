@@ -3,18 +3,20 @@ import ListItem from './ListItem';
 import { useCharacter } from './hooks/characterHook';
 import { Paging } from '../components/Paging';
 import styles from '../components/List.css';
+import airbender from '../assets/airbender.jpg';
 
 
 
 const List = () => {
-  const { characters, setNewPage, page, setBackPage } = useCharacter();
+  const { characters, setNewPage, page, setBackPage, loading } = useCharacter();
+  
+  if(loading) return <img src={airbender} className={styles.Loading} />;
 
   const listItemElements = characters.map(({ name, photoUrl, _id }) => (
     <ListItem key={name} name={name} _id={_id} photoUrl={photoUrl} />
   ));
 
   const handlePaging = ({ target }) => {
-    console.log(target.value);
     setNewPage(target.value);
   };
 

@@ -13,3 +13,21 @@
   flex-direction: row;
   justify-content: center;
 }
+
+.Loading {
+    width: 200px;
+
+    img {
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
