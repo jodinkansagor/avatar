@@ -1,27 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ListItem from './ListItem';
+import { useCharacter } from './hooks/characterHook';
 
-const List = ({ listItems }) => {
 
-  const listItemElements = listItems.map(({ name, affiliation, photoURL }) => (
-    <ListItem key={name} name={name} affiliation={affiliation} photoURL={photoURL} />
+const List = () => {
+  const { characters } = useCharacter();
+
+  const listItemElements = characters.map(({ name, photoUrl, _id }) => (
+    <ListItem key={name} name={name} _id={_id} photoUrl={photoUrl} />
   ));
 
+    // handlePaging = () => {
+    //   //call fetch again and increment page
+    // }
+
   return (
-    <section>
+    <ul>
       {listItemElements}
-    </section>
+      {/* <Paging onClick={handlePaging} /> */}
+    </ul>
   );
 
-};
-
-List.propTypes = {
-  listItems: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    affiliation: PropTypes.string.isRequired,
-    photoURL: PropTypes.string.isRequired
-  }))
 };
 
 export default List;
