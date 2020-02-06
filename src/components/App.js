@@ -8,12 +8,12 @@ import {
 import List from './List';
 import Character from './Character';
 import avatarLogo from '../assets/avatar-logo.png';
-import './App.css';
+import styles from './App.css';
 
 
 const Header = () => (
   <header>
-    <a href = '/'><img src={avatarLogo} /></a>
+    <a href='/'><img src={avatarLogo} /></a>
   </header>
 );
 
@@ -22,7 +22,9 @@ const Header = () => (
 export default function App() {
   return (
     <Router>
-      <Header />
+      <div className={styles.header}>
+        <Header />
+      </div>
       <Switch>
         <Route exact path='/' component={List} />
         <Route path='/character/:id' component={Character} />

@@ -2,6 +2,7 @@ import React from 'react';
 import ListItem from './ListItem';
 import { useCharacter } from './hooks/characterHook';
 import { Paging } from '../components/Paging';
+import styles from '../components/List.css';
 
 
 
@@ -22,12 +23,12 @@ const List = () => {
   };
 
   return (
-    <section>
-      <Paging onClick={handleBackPaging} page={page} label="Previous"/>
-      <Paging onClick={handlePaging} page={page} label="Next"/>
-      <ul>
+    <section >
+      <ul className={styles.listClass}>
         {listItemElements}
       </ul>
+      <Paging onClick={handleBackPaging} page={page} label="Previous"/>
+      <Paging onClick={handlePaging} page={page} label="Next"/>
     </section>
   );
 

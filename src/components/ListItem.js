@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-
+import styles from '../components/ListItem.css';
 
 const ListItem = ({ name, photoUrl, _id }) => (
   <li>
@@ -14,7 +14,7 @@ const ListItem = ({ name, photoUrl, _id }) => (
 
 ListItem.propTypes = {
   name: PropTypes.string.isRequired,
-  photoUrl: PropTypes.string.isRequired,
+  photoUrl: PropTypes.string,
   _id: PropTypes.string.isRequired
 };
 

@@ -14,7 +14,7 @@ const Character = () => {
       <h3>{avatar.allies || 'No allies listed'}</h3>
       <h3>{avatar.enemies || 'No enemies listed'}</h3>
       <h3>{avatar.weapon || 'No weapon listed'}</h3>
-      <img src={avatar.photoUrl || 'No photo provided'} />
+      <img src={avatar.photoUrl} />
     </section >
   );
 };
