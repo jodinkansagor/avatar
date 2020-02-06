@@ -11,23 +11,28 @@
 .paging {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+
 }
 
 .Loading {
-    width: 200px;
+  position: fixed;
+  top: 250px;
+  width: 200px;
+  
+      animation: spin 5s linear infinite;
+        @keyframes spin {
+          0% {
+            transform: rotate(0);
+          }
+    
+          100% {
+            transform: rotate(360deg);
+          }
+        }
 
-    img {
-    animation: spin 1s linear infinite;
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  }
+  
 }

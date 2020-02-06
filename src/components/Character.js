@@ -15,7 +15,7 @@ const Character = () => {
       <h3>Allies: {avatar.allies || 'No allies listed'}</h3>
       <h3>Enemies: {avatar.enemies || 'No enemies listed'}</h3>
       <h3>Weapons: {avatar.weapon || 'No weapon listed'}</h3>
-      <img src={avatar.photoUrl} />
+      <img src={avatar.photoUrl  || airbender} />
     </section >
   );
 };
