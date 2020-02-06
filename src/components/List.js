@@ -27,9 +27,11 @@ const List = () => {
       <ul className={styles.listClass}>
         {listItemElements}
       </ul>
-      <Paging onClick={handleBackPaging} page={page} label="Previous"/>
-      <Paging onClick={handlePaging} page={page} label="Next"/>
-    </section>
+      <section className={styles.paging}>
+        <Paging onClick={handleBackPaging} page={page} label="Previous" />
+        <Paging onClick={handlePaging} page={page} label="Next" />
+      </section>
+    </section >
   );
 
 };

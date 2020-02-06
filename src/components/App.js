@@ -25,10 +25,12 @@ export default function App() {
       <div className={styles.header}>
         <Header />
       </div>
-      <Switch>
-        <Route exact path='/' component={List} />
-        <Route path='/character/:id' component={Character} />
-      </Switch>
+      <div className={styles.theRest}>
+        <Switch>
+          <Route exact path='/' component={List} />
+          <Route path='/character/:id' component={Character} />
+        </Switch>
+      </div>
     </Router>
   );
 }
