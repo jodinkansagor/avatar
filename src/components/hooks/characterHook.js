@@ -16,5 +16,9 @@ export const useCharacter = () => {
     setPage(newPage);
   };
 
-  return { characters, setNewPage, page };
+  const setBackPage = (page) => {
+    const newPage = Number(page) - 1;
+    setPage(newPage);
+  };
+  return { characters, setNewPage, page, setBackPage };
 };

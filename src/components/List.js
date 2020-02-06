@@ -6,7 +6,7 @@ import { Paging } from '../components/Paging';
 
 
 const List = () => {
-  const { characters, setNewPage, page } = useCharacter();
+  const { characters, setNewPage, page, setBackPage } = useCharacter();
 
   const listItemElements = characters.map(({ name, photoUrl, _id }) => (
     <ListItem key={name} name={name} _id={_id} photoUrl={photoUrl} />
@@ -17,9 +17,14 @@ const List = () => {
     setNewPage(target.value);
   };
 
+  const handleBackPaging = ({ target }) => {
+    setBackPage(target.value);
+  };
+
   return (
     <section>
-      <Paging onClick={handlePaging} page={page}/>
+      <Paging onClick={handleBackPaging} page={page} label="Previous"/>
+      <Paging onClick={handlePaging} page={page} label="Next"/>
       <ul>
         {listItemElements}
       </ul>
