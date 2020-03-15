@@ -1,0 +1,24 @@
+html {
+  scroll-behavior: smooth
+
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+header img {
+  margin-bottom: 15px;
+  width: 350px;
+}
+
+.theRest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;;
+}
+
